@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([0-9a-zA-Z-_/]+)$ index.php?u=$1 [L,QSA]
+Options -Indexes 
